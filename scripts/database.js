@@ -36,5 +36,5 @@ export const getHaulingShips = () => {
 }
 
 export const getShippingShips = () => {
-    return database.shippingShips.map(ship = ({...ship}))
+    return database.shippingShips.map(shippingShip = ({...shippingShip}))
 }
