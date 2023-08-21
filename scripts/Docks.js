@@ -6,7 +6,7 @@ export const DockList = () => {
     let docksHTML = `<ul class='docks-list'>`
 
     for (const dock of docks) {
-        docksHTML += `<li>${dock.id} ${dock.location} ${dock.volume}</li>`
+        docksHTML += `<li data-id="${dock.id}" data-volume="${dock.volume}">${dock.location} </li>`
     }
 
     docksHTML += `</ul>`

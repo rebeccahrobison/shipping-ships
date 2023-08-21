@@ -6,7 +6,7 @@ const htmlDockList = DockList()
 const htmlCargoShipList = cargoShipList()
 const htmlHaulerList = HaulerList()
 
-const parentHTMLElement = document.querySelector(".container")
+let parentHTMLElement = document.querySelector(".container")
 parentHTMLElement.innerHTML = htmlDockList
-parentHTMLElement += htmlCargoShipList
-parentHTMLElement += htmlHaulerList
+parentHTMLElement.innerHTML += htmlCargoShipList
+parentHTMLElement.innerHTML += htmlHaulerList

@@ -7,13 +7,14 @@ document.addEventListener(
         if (itemClicked.dataset.type === "hauler") {
             let counter = 0
             const shippingShips = getShippingShips()
+            console.log(itemClicked.dataset.id)
             for (const ship of shippingShips) {
-                if (ship.id === parseInt(itemClicked.dataset.id)) {
+                if (ship.haulerId === parseInt(itemClicked.dataset.id)) {
                     counter++
                 }
             }
 
-            window.alert()
+            window.alert(`This hauler is caryying ${counter} shipping ships`)
         }
     }
 )
@@ -25,7 +26,12 @@ export const HaulerList = () => {
     let haulersHTML = `<ul class="haulers-list">`
 
     for (const hauler of haulers) {
-        haulersHTML += `<li data-type="hauler" data-id="${hauler.id}">${hauler.name} ${hauler.dockId}</li>`
+        haulersHTML += `<li 
+                        data-type="hauler" 
+                        data-id="${hauler.id}" 
+                        data-dockId="${hauler.dockId}"
+                        >${hauler.name}
+                        </li>`
     }
 
     haulersHTML += `</ul>`

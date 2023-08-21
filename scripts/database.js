@@ -32,9 +32,9 @@ export const getDocks = () => {
 }
 
 export const getHaulingShips = () => {
-    return database.haulers.map(hauler = ({...hauler}))
+    return database.haulers.map(hauler => ({...hauler}))
 }
 
 export const getShippingShips = () => {
-    return database.shippingShips.map(shippingShip = ({...shippingShip}))
+    return database.shippingShips.map(ship => ({...ship}))
 }
