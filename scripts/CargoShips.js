@@ -7,8 +7,7 @@ document.addEventListener(
     "click",
     (clickEvent) => {
         const itemClicked = clickEvent.target
-        console.log(itemClicked.dataset.type)
-        console.log(parseInt(itemClicked.dataset.haulerid))
+
         if (itemClicked.dataset.type === "cargoShip") {
             const haulerIdClicked = parseInt(itemClicked.dataset.haulerid)
             
