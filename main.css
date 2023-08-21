@@ -1,0 +1,56 @@
+:root {
+    --darkerblue: #93b8e4;
+    --textblack: #413e43;
+    --lighterblue: #f3ffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    background-color: var(--darkerblue);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+h1 {
+    margin: 10px;
+}
+
+h3 {
+    margin-bottom: 20px;
+}
+
+.container {
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul {
+   list-style-type: none; 
+}
+
+li {
+    background-color: var(--lighterblue);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin: 2px;
+    padding: 8px;
+}
+
+.docks-list {
+    margin: 20px;
+    padding: 20px;
+    border: dotted white 2px;
+}
+
+.cargoships-list {
+    margin: 20px;
+    padding: 20px;
+    border: dotted white 2px;
+}
+
+.haulers-list {
+    margin: 20px;
+    padding: 20px;
+    border: dotted white 2px;
+}
+
