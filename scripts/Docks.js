@@ -45,7 +45,17 @@ document.addEventListener(
 export const DockList = () => {
 
 
-    let docksHTML = `<ul class='docks-list'>`
+    let docksHTML = `<ul class='docks-list'><h3>Docks</h3>`
+
+    docks.sort(function (a, b) {
+        if (a.location < b.location) {
+            return -1
+        }
+        if (a.location > b.location) {
+            return 1
+        }
+        return 0
+    })
 
     for (const dock of docks) {
         docksHTML += `<li 
@@ -53,7 +63,7 @@ export const DockList = () => {
         data-name="${dock.location}"
         data-id="${dock.id}" 
         data-volume="${dock.volume}"
-        >${dock.location} 
+        >${dock.location} can hold ${dock.volume} million tons of cargo
         </li>`
     }
 

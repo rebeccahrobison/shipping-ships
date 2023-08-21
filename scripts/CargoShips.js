@@ -25,8 +25,17 @@ document.addEventListener(
 export const cargoShipList = () => {
     
 
-    let cargoShipHTML = `<ul class="cargoships-list">`
-
+    let cargoShipHTML = `<ul class="cargoships-list"><h3>Cargo Ships</h3>`
+    
+    cargoShips.sort(function (a, b) {
+        if (a.name < b.name) {
+            return -1
+        }
+        if (a.name > b.name) {
+            return 1
+        }
+        return 0
+    })
     for (const ship of cargoShips) {
         cargoShipHTML += `<li 
                             data-type="cargoShip" 

@@ -23,7 +23,17 @@ document.addEventListener(
 export const HaulerList = () => {
     const haulers = getHaulingShips()
 
-    let haulersHTML = `<ul class="haulers-list">`
+    let haulersHTML = `<ul class="haulers-list"><h3>Ship Haulers</h3>`
+
+    haulers.sort(function (a, b) {
+        if (a.name < b.name) {
+            return -1
+        }
+        if (a.name > b.name) {
+            return 1
+        }
+        return 0
+    })
 
     for (const hauler of haulers) {
         haulersHTML += `<li 
